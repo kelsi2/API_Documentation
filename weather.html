@@ -1,0 +1,29 @@
+<html>
+   <meta charset="UTF-8">
+   <head>
+      <title>Sample page</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script>
+      var settings = {
+        "url": "https://api.openweathermap.org/data/2.5/weather?lat=37.3565982&lon=-121.9689848&units=imperial&appid=APIKEY",
+        "method": "GET",
+        "timeout": 0,
+      };
+
+        $.ajax(settings).done(function (response) {
+          console.log(response);
+
+          var content = response.wind.speed;
+          $("#windSpeed").append(content);
+
+          var currentWeather = response.weather[0].main;
+          $("#currentWeather").append(currentWeather);
+        });
+      </script>
+   </head>
+   <body>
+      <h1>Sample Page</h1>
+      <div id="windSpeed">Wind speed: </div>
+      <div id="currentWeather">Current weather conditions: </div>
+   </body>
+</html>

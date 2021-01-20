@@ -1,0 +1,18 @@
+{
+  "id": 780,
+  "category": {
+    "id": 123,
+    "name": "test"
+  },
+  "name": "grouch cat",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}
